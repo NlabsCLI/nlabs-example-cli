@@ -1,0 +1,29 @@
+{
+  "name": "nlabs",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Nlabs CLI",
+  "main": "dist/nlabs.js",
+  "bin": {
+    "nlabs": "./dist/nlabs.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/nlabs.js",
+    "watch": "tsc -w",
+    "prestart": "npm run build",
+    "postbuild": "echo 'Build tamamlandı!' && cp -r src/Core dist/Core"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^9.5.0",
+    "fs-extra": "^10.1.0",
+    "inquirer": "^8.2.6"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/inquirer": "^9.0.7",
+    "@types/node": "^22.9.0",
+    "typescript": "^4.9.5"
+  }
+}
